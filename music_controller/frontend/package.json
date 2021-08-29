@@ -26,5 +26,9 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.60",
     "react-router-dom": "^5.2.0"
+  },
+  "engines": {
+    "node": "12.x",   
+    "npm": "6.x"    
   }
 }

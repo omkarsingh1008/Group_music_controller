@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import RoomJoinpage from './RoomJoinpage';
 import CreateRoomPage from './CreateRoomPage';
+import Info from './info';
 import Room from './Room';
 import { Grid, Button, ButtonGroup, Typography } from "@material-ui/core";
 import { BrowserRouter as Router, Switch,Route,Link,Redirect} from "react-router-dom";
+import Paper from '@material-ui/core/Paper';
+
 
 export default class HomePage extends Component {
     constructor(props) {
@@ -29,6 +32,7 @@ export default class HomePage extends Component {
     renderHomePage() {
         return (
             <Grid container spacing={3} align="center">
+               
                 <Grid item xs={12}>
                     <Typography variant="h3" compact='h3'>
                         house party
@@ -38,6 +42,9 @@ export default class HomePage extends Component {
                     <ButtonGroup disableElevation variant="contained" color="primary">
                         <Button color="primary" to='/join' component={Link}>
                             Join a Room
+                        </Button>
+                        <Button color="default" to='/info' component={Link}>
+                            Info
                         </Button>
                         <Button color="secondary" to='/create' component={Link}>
                             Create a Room
@@ -70,6 +77,7 @@ export default class HomePage extends Component {
           />
 
                 <Route path='/join' component={RoomJoinpage} />
+                <Route path='/info' component={Info} />
                 <Route path='/create' component={CreateRoomPage} />
                 <Route
             path="/room/:roomCode"
